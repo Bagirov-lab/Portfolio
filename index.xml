@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science Portfolio on Evgeny Bagirov</title>
+    <link>https://Bagirov-lab.github.io/Portfolio/</link>
+    <description>Recent content in Data Science Portfolio on Evgeny Bagirov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://Bagirov-lab.github.io/Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HW 2</title>
+      <link>https://Bagirov-lab.github.io/Portfolio/post/hw-2/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Bagirov-lab.github.io/Portfolio/post/hw-2/</guid>
+      <description>Packages # Basic import numpy as np import pandas as pd import matplotlib.pyplot as plt # Statistics import scipy as sp import statsmodels.api as sm from statsmodels.stats.descriptivestats import describe import arch from statsmodels import graphics # Technical for Jupyter from IPython.display import Image HW description Image(filename=&amp;#39;D://Empirical Finance/HW_2.png&amp;#39;)   Download the data For this second assignment, I simply have to code the predictive regressions in Chapter 3. This regressions were based on the data loaded to the blackboard, named &amp;ldquo;predictability&amp;rdquo;, which is an excel file.</description>
+    </item>
+    
+    <item>
+      <title>My first post</title>
+      <link>https://Bagirov-lab.github.io/Portfolio/post/project_1/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Bagirov-lab.github.io/Portfolio/post/project_1/</guid>
+      <description>7 years come from the day when I entered university. For all this years, I have constantly developed my mind. Now, I feel more than enough to kick start this research campaign of my life !</description>
+    </item>
+    
+  </channel>
+</rss>

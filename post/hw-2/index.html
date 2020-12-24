@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>HW 2 | Evgeny Bagirov</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This homework was held during Empirical Finance course and was dedicated to robusted SE&#39;s">
+    <meta name="generator" content="Hugo 0.79.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="https://Bagirov-lab.github.io/Portfolio/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="HW 2" />
+<meta property="og:description" content="This homework was held during Empirical Finance course and was dedicated to robusted SE&#39;s" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Bagirov-lab.github.io/Portfolio/post/hw-2/" />
+<meta property="article:published_time" content="2020-12-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-23T00:00:00+00:00" />
+<meta itemprop="name" content="HW 2">
+<meta itemprop="description" content="This homework was held during Empirical Finance course and was dedicated to robusted SE&#39;s">
+<meta itemprop="datePublished" content="2020-12-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2180">
+
+
+
+<meta itemprop="keywords" content="Econometrics," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HW 2"/>
+<meta name="twitter:description" content="This homework was held during Empirical Finance course and was dedicated to robusted SE&#39;s"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://Bagirov-lab.github.io/Portfolio/images/Pope-Edouard-de-Beaumont-1844.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://Bagirov-lab.github.io/Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Evgeny Bagirov
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://Bagirov-lab.github.io/Portfolio/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://Bagirov-lab.github.io/Portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="https://www.linkedin.com/in/e-bagirov/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/djeca96" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">HW 2</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              This homework was held during Empirical Finance course and was dedicated to robusted SE&#39;s
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://Bagirov-lab.github.io/Portfolio/post/hw-2/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://Bagirov-lab.github.io/Portfolio/post/hw-2/&amp;text=HW%202" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://Bagirov-lab.github.io/Portfolio/post/hw-2/&amp;title=HW%202" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">HW 2</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-12-23T00:00:00Z">December 23, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="packages">Packages</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Basic</span>
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+
+<span style="color:#75715e"># Statistics</span>
+<span style="color:#f92672">import</span> scipy <span style="color:#f92672">as</span> sp
+<span style="color:#f92672">import</span> statsmodels.api <span style="color:#f92672">as</span> sm
+<span style="color:#f92672">from</span> statsmodels.stats.descriptivestats <span style="color:#f92672">import</span> describe
+<span style="color:#f92672">import</span> arch
+<span style="color:#f92672">from</span> statsmodels <span style="color:#f92672">import</span> graphics
+
+<span style="color:#75715e"># Technical for Jupyter</span>
+<span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> Image
+</code></pre></div><h2 id="hw-description">HW description</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Image(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;D://Empirical Finance/HW_2.png&#39;</span>)
+</code></pre></div><figure>
+    <img src="https://Bagirov-lab.github.io/Portfolio/images/HW_2.png"/> 
+</figure>
+
+<h2 id="download-the-data">Download the data</h2>
+<p>For this second assignment, I simply have to code the predictive regressions in Chapter 3. This regressions were based on the data loaded to the blackboard, named &ldquo;predictability&rdquo;, which is an excel file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># This is my URL to the file</span>
+MyURL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;D://Empirical Finance/Data/predictability.xls&#39;</span>
+
+RawDataDF <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(MyURL) <span style="color:#75715e"># Load the data into the Data Frame</span>
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;The shape of DataFrame is&#34;</span>,RawDataDF<span style="color:#f92672">.</span>shape)  
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;The column types are&#34;</span>,RawDataDF<span style="color:#f92672">.</span>dtypes)  
+</code></pre></div><pre><code>The shape of DataFrame is (672, 7)
+The column types are DATE        datetime64[ns]
+retdny             float64
+retdnyew           float64
+dyny               float64
+tbill              float64
+bmny                object
+epny                object
+dtype: object
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(RawDataDF[[<span style="color:#e6db74">&#39;bmny&#39;</span>,<span style="color:#e6db74">&#39;epny&#39;</span>]]<span style="color:#f92672">.</span>to_markdown()) <span style="color:#75715e"># Everything is okey BUT bmny and epny shall be float64 let&#39;s look on them</span>
+</code></pre></div><pre><code>|     | bmny                | epny                |
+|----:|:--------------------|:--------------------|
+|   0 | starts 1963         | starts 1963         |
+|   1 | nan                 | nan                 |
+|   2 | nan                 | nan                 |
+|   3 | nan                 | nan                 |
+|   4 | nan                 | nan                 |
+|   5 | nan                 | nan                 |
+|   6 | nan                 | nan                 |
+|   7 | nan                 | nan                 |
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Clearly we need no correct columns bmny and epny info for model contruction.</span>
+CleanDataDF <span style="color:#f92672">=</span> RawDataDF<span style="color:#f92672">.</span>copy() <span style="color:#75715e"># copy what we have</span>
+
+CleanDataDF<span style="color:#f92672">.</span>bmny <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(CleanDataDF<span style="color:#f92672">.</span>bmny, errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+
+CleanDataDF<span style="color:#f92672">.</span>epny <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(CleanDataDF<span style="color:#f92672">.</span>epny, errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;The column types now are:&#34;</span>,CleanDataDF<span style="color:#f92672">.</span>dtypes, sep <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)  
+</code></pre></div><pre><code>The column types now are:
+DATE        datetime64[ns]
+retdny             float64
+retdnyew           float64
+dyny               float64
+tbill              float64
+bmny               float64
+epny               float64
+dtype: object
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># The last but not least - date column should be an index as we have timeseries data</span>
+CleanDataDF<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;DATE&#39;</span>, inplace <span style="color:#f92672">=</span> True)
+
+<span style="color:#66d9ef">print</span>(CleanDataDF<span style="color:#f92672">.</span>head()<span style="color:#f92672">.</span>to_markdown())
+</code></pre></div><pre><code>| DATE                |     retdny |   retdnyew |      dyny |       tbill |   bmny |   epny |
+|:--------------------|-----------:|-----------:|----------:|------------:|-------:|-------:|
+| 1946-01-31 00:00:00 |  0.0633225 |  0.0943907 | 0.0340268 | 0.000281135 |    nan |    nan |
+| 1946-02-28 00:00:00 | -0.0579194 | -0.0669144 | 0.0365282 | 0.000281135 |    nan |    nan |
+| 1946-03-30 00:00:00 |  0.0596126 |  0.0582116 | 0.0346261 | 0.000281135 |    nan |    nan |
+| 1946-04-30 00:00:00 |  0.0415455 |  0.0516969 | 0.0334668 | 0.000281135 |    nan |    nan |
+| 1946-05-31 00:00:00 |  0.0407136 |  0.0547262 | 0.0320587 | 0.000281135 |    nan |    nan |
+</code></pre>
+<h2 id="short-glance-on-the-data">Short glance on the data</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Lets look on descriptive statistics of our potetial regressors&#39;</span>)
+<span style="color:#66d9ef">print</span>(CleanDataDF<span style="color:#f92672">.</span>describe()<span style="color:#f92672">.</span>to_markdown())
+</code></pre></div><pre><code>Lets look on descriptive statistics of our potetial regressors
+|       |      retdny |    retdnyew |        dyny |         tbill |       bmny |        epny |
+|:------|------------:|------------:|------------:|--------------:|-----------:|------------:|
+| count | 672         | 672         | 672         | 672           | 464        | 464         |
+| mean  |   0.0101228 |   0.0111269 |   0.0376259 |   0.00380861  |   0.532779 |   0.201097  |
+| std   |   0.0408904 |   0.048073  |   0.0122273 |   0.00238614  |   0.186045 |   0.0696758 |
+| min   |  -0.216179  |  -0.256198  |   0.0145035 |   0.000260582 |   0.219836 |   0.103701  |
+| 25%   |  -0.0155417 |  -0.015723  |   0.0292118 |   0.00204517  |   0.397271 |   0.140878  |
+| 50%   |   0.0124718 |   0.0125352 |   0.0361999 |   0.00367166  |   0.493201 |   0.182257  |
+| 75%   |   0.0377315 |   0.0397461 |   0.0455671 |   0.00496661  |   0.691195 |   0.254609  |
+| max   |   0.168062  |   0.2993    |   0.0725002 |   0.0133625   |   1.02862  |   0.390809  |
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;What our time series look like:&#34;</span>)
+<span style="color:#66d9ef">print</span>(CleanDataDF<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>view())
+</code></pre></div><pre><code>What our time series look like:
+DatetimeIndex(['1946-01-31', '1946-02-28', '1946-03-30', '1946-04-30',
+               '1946-05-31', '1946-06-28', '1946-07-31', '1946-08-30',
+               '1946-09-30', '1946-10-31',
+               ...
+               '2001-03-30', '2001-04-30', '2001-05-31', '2001-06-29',
+               '2001-07-31', '2001-08-31', '2001-09-28', '2001-10-31',
+               '2001-11-30', '2001-12-31'],
+              dtype='datetime64[ns]', name='DATE', length=672, freq=None)
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Is our data correclty ordered ( monotonic + increasing ):&#34;</span>,CleanDataDF<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>is_monotonic_increasing)
+</code></pre></div><pre><code>Is our data correclty ordered ( monotonic + increasing ): True
+</code></pre>
+<h2 id="model-set-up">Model set-up</h2>
+<p>We will run a regression of the excess (with respect to the risk-free rate) continuously-
+compounded returns on the value-weighted market portfolio on the past dividend-to-price
+ratio and see what we obtain. The regression is:
+$$
+\log{(1+R^{M}<em>{t})} - \log{(1+R^{f}</em>{t})} = \beta_{0} + \beta_{1}*(\frac{d}{p})_{t-1}+u_t
+$$</p>
+<h2 id="regression-based-on-monthly-date">Regression based on monthly date</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Slice date on the given rate</span>
+
+Data_1 <span style="color:#f92672">=</span> CleanDataDF<span style="color:#f92672">.</span>copy() <span style="color:#75715e"># Copy the data</span>
+Data_1<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;retdnyew&#39;</span>,<span style="color:#e6db74">&#39;bmny&#39;</span>,<span style="color:#e6db74">&#39;epny&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+
+ret_m <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>Data_1<span style="color:#f92672">.</span>retdny)
+ret_f <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>Data_1<span style="color:#f92672">.</span>tbill)
+Data_1[<span style="color:#e6db74">&#39;ER&#39;</span>] <span style="color:#f92672">=</span> ret_m<span style="color:#f92672">-</span>ret_f
+Data_1<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;tbill&#39;</span>,<span style="color:#e6db74">&#39;retdny&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+
+Data_1[<span style="color:#e6db74">&#39;dyny(-1)&#39;</span>] <span style="color:#f92672">=</span> Data_1<span style="color:#f92672">.</span>dyny<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">1</span>) <span style="color:#75715e">#</span>
+Data_1<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;dyny&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+Data_1<span style="color:#f92672">.</span>dropna(axis <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, how <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;any&#39;</span>, inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop observations (rows), which have missing value</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">yVar <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ER&#39;</span>
+xVar <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;dyny(-1)&#39;</span>
+
+M1 <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(Data_1[yVar],sm<span style="color:#f92672">.</span>add_constant(Data_1[xVar]))
+r1 <span style="color:#f92672">=</span> M1<span style="color:#f92672">.</span>fit()
+
+<span style="color:#66d9ef">print</span>(r1<span style="color:#f92672">.</span>summary())
+</code></pre></div><pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     ER   R-squared:                       0.009
+Model:                            OLS   Adj. R-squared:                  0.008
+Method:                 Least Squares   F-statistic:                     6.367
+Date:                Tue, 22 Dec 2020   Prob (F-statistic):             0.0119
+Time:                        23:58:26   Log-Likelihood:                 1193.0
+No. Observations:                 671   AIC:                            -2382.
+Df Residuals:                     669   BIC:                            -2373.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0070      0.005     -1.356      0.176      -0.017       0.003
+dyny(-1)       0.3270      0.130      2.523      0.012       0.073       0.581
+==============================================================================
+Omnibus:                       85.381   Durbin-Watson:                   1.873
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              219.391
+Skew:                          -0.663   Prob(JB):                     2.29e-48
+Kurtosis:                       5.467   Cond. No.                         82.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</code></pre>
+<p>Notice the significance of the predictor in spite of a low R2.</p>
+<h2 id="regression-based-on-yearly-date">Regression based on yearly date</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Slice date on the given rate</span>
+
+Data_2 <span style="color:#f92672">=</span> CleanDataDF<span style="color:#f92672">.</span>copy() <span style="color:#75715e"># Copy the data</span>
+Data_2<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;retdnyew&#39;</span>,<span style="color:#e6db74">&#39;bmny&#39;</span>,<span style="color:#e6db74">&#39;epny&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+
+ret_m <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>Data_2<span style="color:#f92672">.</span>retdny)
+ret_f <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>Data_2<span style="color:#f92672">.</span>tbill)
+
+Data_2[<span style="color:#e6db74">&#39;ER&#39;</span>] <span style="color:#f92672">=</span> ret_m<span style="color:#f92672">-</span>ret_f
+Data_2<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;tbill&#39;</span>,<span style="color:#e6db74">&#39;retdny&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+
+Data_2[<span style="color:#e6db74">&#39;ER_LTM&#39;</span>] <span style="color:#f92672">=</span> Data_2<span style="color:#f92672">.</span>ER<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">12</span>)<span style="color:#f92672">.</span>sum()
+
+Data_2[<span style="color:#e6db74">&#39;dyny(-11)&#39;</span>] <span style="color:#f92672">=</span> Data_2<span style="color:#f92672">.</span>dyny<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">11</span>)
+
+Data_2<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;dyny&#39;</span>,<span style="color:#e6db74">&#39;ER&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+Data_2<span style="color:#f92672">.</span>dropna(axis <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, how <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;any&#39;</span>, inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop observations (rows), which have missing value</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">yVar <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ER_LTM&#39;</span>
+xVar <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;dyny(-11)&#39;</span>
+
+M2 <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(Data_2[yVar],sm<span style="color:#f92672">.</span>add_constant(Data_2[xVar]))
+r2 <span style="color:#f92672">=</span> M2<span style="color:#f92672">.</span>fit()
+
+<span style="color:#66d9ef">print</span>(r2<span style="color:#f92672">.</span>summary())
+</code></pre></div><pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 ER_LTM   R-squared:                       0.083
+Model:                            OLS   Adj. R-squared:                  0.082
+Method:                 Least Squares   F-statistic:                     59.89
+Date:                Wed, 23 Dec 2020   Prob (F-statistic):           3.78e-14
+Time:                        00:04:35   Log-Likelihood:                 358.59
+No. Observations:                 661   AIC:                            -713.2
+Df Residuals:                     659   BIC:                            -704.2
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0676      0.018     -3.720      0.000      -0.103      -0.032
+dyny(-11)      3.5327      0.456      7.739      0.000       2.636       4.429
+==============================================================================
+Omnibus:                       38.331   Durbin-Watson:                   0.163
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               44.339
+Skew:                          -0.575   Prob(JB):                     2.36e-10
+Kurtosis:                       3.537   Cond. No.                         83.4
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</code></pre>
+<p>The significance of the slope estimate has gone up drastically. The typical conclusion drawn in the literature (and in the industry) is that yearly returns are easier to predict than monthly returns.</p>
+<h3 id="standard-errors-correction">Standard errors correction</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># First of all I would like to make White test to analyse wheather heteroscedasticity is presented</span>
+Test_R2_White <span style="color:#f92672">=</span>   sm<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>diagnostic<span style="color:#f92672">.</span>het_white(r2<span style="color:#f92672">.</span>resid,sm<span style="color:#f92672">.</span>add_constant(Data_2[xVar]))
+Test_R2_White <span style="color:#f92672">=</span>  pd<span style="color:#f92672">.</span>Series(Test_R2_White , index <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;LM-stat&#39;</span>,<span style="color:#e6db74">&#39;LM_p_value&#39;</span>,<span style="color:#e6db74">&#39;F-stat&#39;</span>,<span style="color:#e6db74">&#39;F_p_value&#39;</span>], name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;White-test&#39;</span>)
+<span style="color:#66d9ef">print</span>(Test_R2_White<span style="color:#f92672">.</span>to_markdown())
+</code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:right">White-test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LM-stat</td>
+<td style="text-align:right">7.09802</td>
+</tr>
+<tr>
+<td style="text-align:left">LM_p_value</td>
+<td style="text-align:right">0.0287531</td>
+</tr>
+<tr>
+<td style="text-align:left">F-stat</td>
+<td style="text-align:right">3.57125</td>
+</tr>
+<tr>
+<td style="text-align:left">F_p_value</td>
+<td style="text-align:right">0.0286671</td>
+</tr>
+</tbody>
+</table>
+<p>We see that at 5% significance level we have enough statistical evidence to reject $H_0$ that errors are not heteroskedastic in favour $H_1$ that the errors are heteroskedstic. There is sence to robust our errors on heteroskedasticity, which can be done by calculating White standard errors.
+<!-- raw HTML omitted --> But before we will do it, we need also to understand wheather errors are autocorrelated. To do so, I will produce Durbin Watson test</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Test_R2_Durbin_Watson <span style="color:#f92672">=</span>   sm<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>stattools<span style="color:#f92672">.</span>durbin_watson(r2<span style="color:#f92672">.</span>resid)
+Test_R2_Durbin_Watson <span style="color:#f92672">=</span>  pd<span style="color:#f92672">.</span>Series([r2<span style="color:#f92672">.</span>nobs,<span style="color:#ae81ff">1</span>,Test_R2_Durbin_Watson] ,
+                                   index <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;N observations&#39;</span>,<span style="color:#e6db74">&#39;Number of Parameters, excluding intercept&#39;</span>,<span style="color:#e6db74">&#39;DW-statistics&#39;</span>],
+                                   name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Durbin-Watson&#39;</span>)
+
+Test_R2_Durbin_Watson[<span style="color:#e6db74">&#39;Significance level&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.05</span>
+Test_R2_Durbin_Watson[<span style="color:#e6db74">&#39;DW critical lower&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.758</span>
+Test_R2_Durbin_Watson[<span style="color:#e6db74">&#39;DW critical upper&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.779</span>
+Test_R2_Durbin_Watson[<span style="color:#e6db74">&#39;4-DW critical lower&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1.758</span>
+Test_R2_Durbin_Watson[<span style="color:#e6db74">&#39;4-DW critical upper&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1.779</span>
+
+
+<span style="color:#66d9ef">print</span>(Test_R2_Durbin_Watson<span style="color:#f92672">.</span>to_markdown(colalign<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;left&#39;</span>,<span style="color:#e6db74">&#39;right&#39;</span>)))
+</code></pre></div><pre><code>|                                           |   Durbin-Watson |
+|:------------------------------------------|----------------:|
+| N observations                            |             661 |
+| Number of Parameters, excluding intercept |               1 |
+| DW-statistics                             |        0.163279 |
+| Significance level                        |            0.05 |
+| DW critical lower                         |           1.758 |
+| DW critical upper                         |           1.779 |
+| 4-DW critical lower                       |           2.242 |
+| 4-DW critical upper                       |           2.221 |
+</code></pre>
+<p>We see that at 5% siginificance level we chave enough statistical evidence to reject $H_0$ that $\rho=0$ in favour $H_1$ that $\rho&gt;0$
+<!-- raw HTML omitted --> Therefore, i propose to use Newey-West standard errors.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">8</span>))
+fig <span style="color:#f92672">=</span> graphics<span style="color:#f92672">.</span>tsaplots<span style="color:#f92672">.</span>plot_acf(r2<span style="color:#f92672">.</span>resid, lags <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, zero <span style="color:#f92672">=</span> False)
+
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><pre><code>&lt;Figure size 864x576 with 0 Axes&gt;
+</code></pre>
+<p><img src="output_30_1.png" alt="png"></p>
+<p>Therefore I will use max lag of 7</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">M3 <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(Data_2[yVar],sm<span style="color:#f92672">.</span>add_constant(Data_2[xVar]))
+r3 <span style="color:#f92672">=</span> M3<span style="color:#f92672">.</span>fit(cov_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;HAC&#39;</span>,cov_kwds <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;maxlags&#39;</span>:<span style="color:#ae81ff">7</span>})
+<span style="color:#66d9ef">print</span>(r3<span style="color:#f92672">.</span>summary())
+</code></pre></div><pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 ER_LTM   R-squared:                       0.083
+Model:                            OLS   Adj. R-squared:                  0.082
+Method:                 Least Squares   F-statistic:                     12.66
+Date:                Wed, 23 Dec 2020   Prob (F-statistic):           0.000400
+Time:                        01:19:44   Log-Likelihood:                 358.59
+No. Observations:                 661   AIC:                            -713.2
+Df Residuals:                     659   BIC:                            -704.2
+Df Model:                           1                                         
+Covariance Type:                  HAC                                         
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0676      0.042     -1.624      0.104      -0.149       0.014
+dyny(-11)      3.5327      0.993      3.558      0.000       1.587       5.479
+==============================================================================
+Omnibus:                       38.331   Durbin-Watson:                   0.163
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               44.339
+Skew:                          -0.575   Prob(JB):                     2.36e-10
+Kurtosis:                       3.537   Cond. No.                         83.4
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 7 lags and without small sample correction
+</code></pre>
+<p>The use of Newey-West standard errors has drastically reduced the statistical signicance of the slope estimates. Yet, significance is - again - higher than for the monthly regressions. Again, predictability is stronger over the long haul.</p>
+<h2 id="regression-based-on-5-years-date">Regression based on 5 years date</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Slice date on the given rate</span>
+
+Data_3 <span style="color:#f92672">=</span> CleanDataDF<span style="color:#f92672">.</span>copy() <span style="color:#75715e"># Copy the data</span>
+Data_3<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;retdnyew&#39;</span>,<span style="color:#e6db74">&#39;bmny&#39;</span>,<span style="color:#e6db74">&#39;epny&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+
+ret_m <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>Data_3<span style="color:#f92672">.</span>retdny)
+ret_f <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>Data_3<span style="color:#f92672">.</span>tbill)
+
+Data_3[<span style="color:#e6db74">&#39;ER&#39;</span>] <span style="color:#f92672">=</span> ret_m<span style="color:#f92672">-</span>ret_f
+Data_3<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;tbill&#39;</span>,<span style="color:#e6db74">&#39;retdny&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+
+Data_3[<span style="color:#e6db74">&#39;ER_L5Y&#39;</span>] <span style="color:#f92672">=</span> Data_3<span style="color:#f92672">.</span>ER<span style="color:#f92672">.</span>rolling(<span style="color:#ae81ff">60</span>)<span style="color:#f92672">.</span>sum()
+
+Data_3[<span style="color:#e6db74">&#39;dyny(-59)&#39;</span>] <span style="color:#f92672">=</span> Data_3<span style="color:#f92672">.</span>dyny<span style="color:#f92672">.</span>shift(<span style="color:#ae81ff">59</span>)
+
+Data_3<span style="color:#f92672">.</span>drop(columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;dyny&#39;</span>,<span style="color:#e6db74">&#39;ER&#39;</span>], inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop what don&#39;t need</span>
+Data_3<span style="color:#f92672">.</span>dropna(axis <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, how <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;any&#39;</span>, inplace <span style="color:#f92672">=</span> True) <span style="color:#75715e"># Drop observations (rows), which have missing value</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">yVar <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ER_L5Y&#39;</span>
+xVar <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;dyny(-59)&#39;</span>
+
+M4 <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(Data_3[yVar],sm<span style="color:#f92672">.</span>add_constant(Data_3[xVar]))
+r4 <span style="color:#f92672">=</span> M4<span style="color:#f92672">.</span>fit()
+
+<span style="color:#66d9ef">print</span>(r4<span style="color:#f92672">.</span>summary())
+</code></pre></div><pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 ER_L5Y   R-squared:                       0.293
+Model:                            OLS   Adj. R-squared:                  0.292
+Method:                 Least Squares   F-statistic:                     253.2
+Date:                Wed, 23 Dec 2020   Prob (F-statistic):           6.03e-48
+Time:                        01:22:22   Log-Likelihood:                -30.840
+No. Observations:                 613   AIC:                             65.68
+Df Residuals:                     611   BIC:                             74.52
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.2458      0.039     -6.260      0.000      -0.323      -0.169
+dyny(-59)     15.1978      0.955     15.911      0.000      13.322      17.074
+==============================================================================
+Omnibus:                        0.315   Durbin-Watson:                   0.065
+Prob(Omnibus):                  0.854   Jarque-Bera (JB):                0.358
+Skew:                          -0.054   Prob(JB):                        0.836
+Kurtosis:                       2.950   Cond. No.                         92.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</code></pre>
+<p>Statistical significance has increased further.</p>
+<h3 id="standard-errors-correction-1">Standard errors correction</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># First of all I would like to make White test to analyse wheather heteroscedasticity is presented</span>
+Test_R4_White <span style="color:#f92672">=</span>   sm<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>diagnostic<span style="color:#f92672">.</span>het_white(r4<span style="color:#f92672">.</span>resid,sm<span style="color:#f92672">.</span>add_constant(Data_3[xVar]))
+Test_R4_White <span style="color:#f92672">=</span>  pd<span style="color:#f92672">.</span>Series(Test_R4_White , index <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;LM-stat&#39;</span>,<span style="color:#e6db74">&#39;LM_p_value&#39;</span>,<span style="color:#e6db74">&#39;F-stat&#39;</span>,<span style="color:#e6db74">&#39;F_p_value&#39;</span>], name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;White-test&#39;</span>)
+<span style="color:#66d9ef">print</span>(Test_R4_White<span style="color:#f92672">.</span>to_markdown())
+</code></pre></div><pre><code>|            |   White-test |
+|:-----------|-------------:|
+| LM-stat    | 85.3838      |
+| LM_p_value |  2.87839e-19 |
+| F-stat     | 49.3579      |
+| F_p_value  |  1.35391e-20 |
+</code></pre>
+<p>We see that even at 1% significance level we have enough statistical evidence to reject $H_0$ that errors are not heteroskedastic in favour $H_1$ that the errors are heteroskedstic. There is sence to robust our errors on heteroskedasticity, which can be done by calculating White standard errors.
+<!-- raw HTML omitted --> But before we will do it, we need also to understand wheather errors are autocorrelated. To do so, I will produce Durbin Watson test</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Test_R4_Durbin_Watson <span style="color:#f92672">=</span>   sm<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>stattools<span style="color:#f92672">.</span>durbin_watson(r4<span style="color:#f92672">.</span>resid)
+Test_R4_Durbin_Watson <span style="color:#f92672">=</span>  pd<span style="color:#f92672">.</span>Series([r4<span style="color:#f92672">.</span>nobs,<span style="color:#ae81ff">1</span>,Test_R4_Durbin_Watson] ,
+                                   index <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;N observations&#39;</span>,<span style="color:#e6db74">&#39;Number of Parameters, excluding intercept&#39;</span>,<span style="color:#e6db74">&#39;DW-statistics&#39;</span>],
+                                   name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Durbin-Watson&#39;</span>)
+
+Test_R4_Durbin_Watson[<span style="color:#e6db74">&#39;Significance level&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.05</span>
+Test_R4_Durbin_Watson[<span style="color:#e6db74">&#39;DW critical lower&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.758</span>
+Test_R4_Durbin_Watson[<span style="color:#e6db74">&#39;DW critical upper&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.779</span>
+Test_R4_Durbin_Watson[<span style="color:#e6db74">&#39;4-DW critical lower&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1.758</span>
+Test_R4_Durbin_Watson[<span style="color:#e6db74">&#39;4-DW critical upper&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1.779</span>
+
+
+<span style="color:#66d9ef">print</span>(Test_R4_Durbin_Watson<span style="color:#f92672">.</span>to_markdown(colalign<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;left&#39;</span>,<span style="color:#e6db74">&#39;right&#39;</span>)))
+</code></pre></div><pre><code>|                                           |   Durbin-Watson |
+|:------------------------------------------|----------------:|
+| N observations                            |             613 |
+| Number of Parameters, excluding intercept |               1 |
+| DW-statistics                             |       0.0649652 |
+| Significance level                        |            0.05 |
+| DW critical lower                         |           1.758 |
+| DW critical upper                         |           1.779 |
+| 4-DW critical lower                       |           2.242 |
+| 4-DW critical upper                       |           2.221 |
+</code></pre>
+<p>We see that at 5% siginificance level we chave enough statistical evidence to reject $H_0$ that $\rho=0$ in favour $H_1$ that $\rho&gt;0$
+<!-- raw HTML omitted --> Therefore, i propose to use Newey-West standard errors.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">8</span>))
+fig <span style="color:#f92672">=</span> graphics<span style="color:#f92672">.</span>tsaplots<span style="color:#f92672">.</span>plot_acf(r4<span style="color:#f92672">.</span>resid, lags <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span>, zero <span style="color:#f92672">=</span> False)
+
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><pre><code>&lt;Figure size 864x576 with 0 Axes&gt;
+</code></pre>
+<p><img src="output_43_1.png" alt="png"></p>
+<p>Therefore I will use max lag of 40</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">M5 <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(Data_3[yVar],sm<span style="color:#f92672">.</span>add_constant(Data_3[xVar]))
+r5 <span style="color:#f92672">=</span> M5<span style="color:#f92672">.</span>fit(cov_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;HAC&#39;</span>,cov_kwds <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;maxlags&#39;</span>:<span style="color:#ae81ff">40</span>})
+<span style="color:#66d9ef">print</span>(r5<span style="color:#f92672">.</span>summary())
+</code></pre></div><pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 ER_L5Y   R-squared:                       0.293
+Model:                            OLS   Adj. R-squared:                  0.292
+Method:                 Least Squares   F-statistic:                     9.247
+Date:                Wed, 23 Dec 2020   Prob (F-statistic):            0.00246
+Time:                        01:29:13   Log-Likelihood:                -30.840
+No. Observations:                 613   AIC:                             65.68
+Df Residuals:                     611   BIC:                             74.52
+Df Model:                           1                                         
+Covariance Type:                  HAC                                         
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.2458      0.235     -1.048      0.295      -0.706       0.214
+dyny(-59)     15.1978      4.998      3.041      0.002       5.402      24.993
+==============================================================================
+Omnibus:                        0.315   Durbin-Watson:                   0.065
+Prob(Omnibus):                  0.854   Jarque-Bera (JB):                0.358
+Skew:                          -0.054   Prob(JB):                        0.836
+Kurtosis:                       2.950   Cond. No.                         92.9
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 40 lags and without small sample correction
+</code></pre>
+<p>The use of Newey-West standard errors has drastically reduced the statistical signicance of the slope estimates. Yet, significance is about the same as for the yearly regressions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div><ul class="pa0">
+  
+   <li class="list">
+     <a href="https://Bagirov-lab.github.io/Portfolio/tags/econometrics" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Econometrics</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-white bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://Bagirov-lab.github.io/Portfolio/" >
+    &copy;  Evgeny Bagirov 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="https://www.linkedin.com/in/e-bagirov/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/djeca96" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="https://Bagirov-lab.github.io/Portfolio/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
