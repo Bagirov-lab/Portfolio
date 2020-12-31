@@ -6,14 +6,15 @@
     <description>Recent content in Econometrics on Evgeny Bagirov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://Bagirov-lab.github.io/Portfolio/tags/econometrics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://Bagirov-lab.github.io/Portfolio/tags/econometrics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>HW 2</title>
-      <link>https://Bagirov-lab.github.io/Portfolio/post/hw-2/</link>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      <title>Robusted SE2</title>
+      <link>https://Bagirov-lab.github.io/Portfolio/projects/robusted-se/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Bagirov-lab.github.io/Portfolio/post/hw-2/</guid>
-      <description>Packages # Basic import numpy as np import pandas as pd import matplotlib.pyplot as plt # Statistics import scipy as sp import statsmodels.api as sm from statsmodels.stats.descriptivestats import describe import arch from statsmodels import graphics # Technical for Jupyter from IPython.display import Image HW description Image(filename=&amp;#39;D://Empirical Finance/HW_2.png&amp;#39;)   Download the data For this second assignment, I simply have to code the predictive regressions in Chapter 3. This regressions were based on the data loaded to the blackboard, named &amp;ldquo;predictability&amp;rdquo;, which is an excel file.</description>
+      <guid>https://Bagirov-lab.github.io/Portfolio/projects/robusted-se/</guid>
+      <description>HW description   Short glance on the data Lets look on descriptive statistics of our potential regressors
+| | retdny | retdnyew | dyny | tbill | bmny | epny | |:------|------------:|------------:|------------:|--------------:|-----------:|------------:| | count | 672 | 672 | 672 | 672 | 464 | 464 | | mean | 0.0101228 | 0.0111269 | 0.0376259 | 0.00380861 | 0.532779 | 0.201097 | | std | 0.0408904 | 0.048073 | 0.</description>
     </item>
     
   </channel>
